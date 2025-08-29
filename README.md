@@ -53,3 +53,6 @@ The results demonstrated how demographic and income details play a role in deter
 This project successfully demonstrated how a **Decision Tree Classifier** can be applied to real-world customer data to classify and predict outcomes. By using scikit-learn in VS Code, I was able to preprocess the data, train the model, visualize the decision tree, and analyze customer spending behavior. The Kaggle dataset provided a practical scenario for applying machine learning techniques, and the decision tree model offered an intuitive way to understand customer segmentation. Overall, the project highlights the importance of machine learning in business decision-making, particularly in customer behavior prediction and segmentation.
 
 #OUTPUT
+<img width="1464" height="1135" alt="Image" src="https://github.com/user-attachments/assets/53a1bd50-e3f5-443c-9bc1-37e186db7095" />
+
+<img width="1919" height="1141" alt="Image" src="https://github.com/user-attachments/assets/e94f3dd3-bc65-4781-b3e8-79997d2b0591" />
