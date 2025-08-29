@@ -1,7 +1,8 @@
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import DecisionTreeClassifier , plot_tree
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 import pandas as pd
+import matplotlib.pyplot as plt
 df1 = pd.read_csv("Mall_Customers.csv")
 df1 = pd.get_dummies(df1, columns=['Gender'], drop_first=True) # drop_first=True to avoid multicollinearity
 x = df1[["CustomerID", "Age", "Annual Income (k$)", "Gender_Male"]] # Include the new 'Gender_Male' column
@@ -14,3 +15,6 @@ x_test['Predicted Spending Score'] = y_pred
 output_df = x_test.merge(df1[['CustomerID', 'Gender_Male']], on='CustomerID', how='left')
 output_df['Gender'] = output_df['Gender_Male_y'].apply(lambda x: 'Male' if x else 'Female')
 print(output_df[['CustomerID', 'Gender', 'Age', 'Annual Income (k$)', 'Predicted Spending Score']])
+plt.figure(figsize=(12,8))
+plot_tree(model, feature_names=["CustomerID", "Age", "Annual Income (k$)", "Gender_Male"], filled=True)
+plt.show()
