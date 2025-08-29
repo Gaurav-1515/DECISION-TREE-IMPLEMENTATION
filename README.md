@@ -40,11 +40,15 @@ The **Decision Tree Classifier** from `scikit-learn` was used to train the model
 
 The model was fitted using the training data `(X_train, y_train)`. Once trained, it was used to predict the values of the test set `(X_test)`. These predictions (`y_pred`) allowed us to evaluate how well the decision tree could predict spending behavior for new, unseen customers.
 
-### 4. Visualization of the Decision Tree
+### 4. Accuracy Evaluation
+
+To measure model performance, the accuracy score was calculated using the accuracy_score function from scikit-learn. The model achieved an accuracy of approximately 0.85 (85%) on the test dataset. This indicates that the decision tree was able to correctly predict customer spending scores for the majority of the cases.
+
+### 5. Visualization of the Decision Tree
 
 One of the main advantages of using a decision tree is **interpretability**. The trained tree was visualized using `plot_tree` from scikit-learn. The visualization displayed how the model splits customers based on features such as age and income to predict spending scores. Each node showed the decision condition, number of samples, and predicted value. This made it easier to understand the logic behind the model’s predictions.
 
-### 5. Analysis and Insights
+### 6. Analysis and Insights
 
 The results demonstrated how demographic and income details play a role in determining customers’ spending patterns. Customers with higher income and younger age groups often had higher spending scores, while certain branches of the tree revealed patterns for moderate and low spenders. Although the decision tree can capture complex patterns, it can also overfit the training data, which is something to be aware of. In practice, techniques such as pruning or using ensemble methods like Random Forests can be applied for better accuracy.
 
