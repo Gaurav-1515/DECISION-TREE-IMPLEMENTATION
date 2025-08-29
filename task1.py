@@ -30,4 +30,3 @@ print("\nConfusion Matrix:\n", confusion_matrix(y_test, y_pred))
 plt.figure(figsize=(12,8))
 plot_tree(model, feature_names=["CustomerID", "Age", "Annual Income (k$)", "Gender_Male"], filled=True)
 plt.show()
-
